@@ -26,11 +26,9 @@ func (o IntegerItem) CompareTo(i Item) int {
 
 	switch i.GetType() {
 	case integerItemType:
-		//fmt.Println("integerItemType")
 		ii := i.(*IntegerItem)
 		return o.value.Cmp(ii.value)
 	case stringItemType, listItemType:
-		//fmt.Println("stringItemType, listItemType")
 		return 1
 	default:
 		panic(fmt.Errorf("invalid item: %T", i))

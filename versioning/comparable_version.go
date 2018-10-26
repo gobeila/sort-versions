@@ -75,7 +75,7 @@ func parseVersion(version string) Item {
 
 			newList := NewListItem()
 			list.Add(newList)
-			stack.Push(list)
+			stack.Push(newList)
 			list = newList
 		} else if _, err := strconv.Atoi(c); err == nil {
 			if !isDigit && i > startIndex {
@@ -85,7 +85,7 @@ func parseVersion(version string) Item {
 
 				newList := NewListItem()
 				list.Add(newList)
-				stack.Push(list)
+				stack.Push(newList)
 				list = newList
 			}
 
@@ -99,7 +99,7 @@ func parseVersion(version string) Item {
 
 				newList := NewListItem()
 				list.Add(newList)
-				stack.Push(list)
+				stack.Push(newList)
 				list = newList
 			}
 
