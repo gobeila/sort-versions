@@ -28,13 +28,6 @@ func checkVersionsEqual(v1 string, v2 string, t *testing.T) {
 	if c2.CompareTo(c1) != 0 {
 		t.Errorf("expected %v == %v", v2, v1)
 	}
-
-	// TODO Implement hashcode on ComparableVersion
-	// TODO Implement equals on ComparableVersion
-
-	//assertTrue("expected same hashcode for "+v1+" and "+v2, c1.hashCode() == c2.hashCode())
-	//assertTrue("expected "+v1+".equals( "+v2+" )", c1.equals(c2))
-	//assertTrue("expected "+v2+".equals( "+v1+" )", c2.equals(c1))
 }
 
 func checkVersionArrayOrder(versions []string, t *testing.T) {
